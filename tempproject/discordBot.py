@@ -9,12 +9,14 @@ location = None
 
 destination = None
 
+userID = None # ENTER ID of ADMIN HERE
+
 
 # my announcement command
 
 @client.command()
 async def rcv(ctx):
-    if ctx.author.id == 290928629192589312:
+    if ctx.author.id == userID:
         global location
         location = ctx.channel
         print(ctx.channel)
@@ -25,7 +27,7 @@ async def rcv(ctx):
 @client.command()
 async def say(ctx, *, msg=None):
     print(location)
-    if ctx.author.id == 290928629192589312:
+    if ctx.author.id == userID:
         arr = msg.split()
         if "@" in arr:
             print("cant ping yet. need to add function")
