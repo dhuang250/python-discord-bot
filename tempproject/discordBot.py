@@ -10,7 +10,7 @@ location = None
 destination = None
 
 
-# my talk command
+# my announcement command
 
 @client.command()
 async def rcv(ctx):
